@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&family=Chathura:wght@700&family=Wire+One&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5498db6b17.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+              <form class="search-form" id="search-form">
+                <div class="row">
+                  <div class="col-8">
+                    <input type="search" placeholder="Type a city.." autofocus="on" autocomplete="off" id="city-input"
+                      class="form-control shadow-sm" />
+                  </div>
+                  <div class="col-2">
+                    <button class="btn btn-light">
+                      🔍
+                    </button>
+                  </div>
+                  <div class="col-2">
+                    <button class="btn btn-light" id="current-location-button">
+                      📌
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+  </div>
+    <div class="today-temp">
+      <h1 id="city">RIO DE JANEIRO, BRASIL</h1>
+      <h2 id="currentDate"></h2>
+      <div class="row">
+        <div class="col-6 left"><i class="fas fa-sun"></i></div>
+
+                <div class="col-6 right">
+                  <span id="temperature">25</span>
+                  <span id="units"><a href="" id="celsius-link">°C</a>
+                  <a href="" id="fahrenheit-link">/°F</a></span>
+                </br><span id="description"></span></div>
+      </div>
+      <p class="alert-advice">
+        😎 <em>Don't forget to wear sunglasses!</em>
+        <hr />
+      </p>
+    </div>
+<form>
+<div class="row">
+  <div class="col">
+        <div class="card  today-info">
+          <ul>
+            <li>
+            <i class="fas fa-cloud-sun"></i> <spanid id="sun-set"></span>
+          </li>
+          <li>
+            <i class="fas fa-moon"></i> <spanid id="sun-set"></span>
+          </li>
+          <li>
+            <i class="fas fa-thermometer-half"></i> <span id="temp-min">°C</span>/<strong><span id="temps-max">°C</span></strong>
+            </li>
+          </ul>
+    </div>
+    </div>
+      <div class="col">
+        <div class="card today-info">
+          <ul>
+            <li>
+            <i class="fas fa-umbrella"></i> <spanid id="humidity"></span>%
+          </li>
+          <li>
+            <i class="fas fa-tint"></i> 70%
+          </li>
+          <li>
+            <i class="fas fa-wind"></i> <spanid id="wind"></span>km/h
+          </li>
+          </ul>
+    </div>
+        </div>
+      </div>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Today</button>
+  <button type="button" class="btn btn-secondary">Next 5 days</button>
+</div>
+</form>
+        <p class="footer">This page was built by <a href="https://www.linkedin.com/in/gaelle-cottan/" class="linkedin">Gaelle
+            Cottan</a></p>
+      </div>
+    </div>
+  </body>
+    <script src="src/script.js"></script>
+</html>
